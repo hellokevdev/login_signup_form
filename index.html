@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
@@ -19,8 +20,10 @@
                 <input type="text" class="form__input" autofocus placeholder="Nutzername oder E-Mail">
                 <div class="form__input-error-message"></div>
             </div>
-            <div class="form__input-group">
-                <input type="password" class="form__input" autofocus placeholder="Passwort">
+            <div class="form__input-group password-container" id="signInPasswordContainer">
+                <i class="fa-solid fa-eye visibility-icon"></i>
+                <i class="fa-solid fa-eye-slash visibility-icon visibility--hidden"></i>
+                <input type="password" id="signInPassword" class="form__input password" autofocus placeholder="Passwort">
                 <div class="form__input-error-message"></div>
             </div>
             <button class="form__button" id="signInButton" type="submit">Einloggen</button>
@@ -43,12 +46,16 @@
                 <input type="text" id="signUpMail" class="form__input" autofocus placeholder="E-Mail">
                 <div class="form__input-error-message"></div>
             </div>
-            <div class="form__input-group">
-                <input type="password" id="signUpPassword" class="form__input" autofocus placeholder="Passwort">
+            <div class="form__input-group password-container" id="signUpPasswordContainer">
+                <i class="fa-solid fa-eye visibility-icon"></i>
+                <i class="fa-solid fa-eye-slash visibility-icon visibility--hidden"></i>
+                <input type="password" id="signUpPassword" class="form__input password" autofocus placeholder="Passwort">
                 <div class="form__input-error-message"></div>
             </div>
-            <div class="form__input-group">
-                <input type="password" id="signUpPasswordRepeat" class="form__input" autofocus placeholder="Passwort bestätigen">
+            <div class="form__input-group password-container" id="repeatPasswordContainer">
+                <i class="fa-solid fa-eye visibility-icon"></i>
+                <i class="fa-solid fa-eye-slash visibility-icon visibility--hidden"></i>
+                <input type="password" id="repeatPassword" class="form__input password" autofocus placeholder="Passwort bestätigen">
                 <div class="form__input-error-message"></div>
             </div>
             <button class="form__button" id="signUpButton" type="submit">Account erstellen</button>

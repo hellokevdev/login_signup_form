@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setInputError(inputElement, 'Passwort muss mindestens eine Zahl beinhalten');
             }else if(e.target.id === 'signUpPassword' && value.length > 0 && checkForSpecialChars(value) == false){
                 setInputError(inputElement, 'Passwort muss mindestens ein Sonderzeichen beinhalten');
-            }else if(e.target.id === 'signUpPasswordRepeat' && value.length > 0 && document.getElementById('signUpPasswordRepeat').value != document.getElementById('signUpPassword').value){
+            }else if(e.target.id === 'repeatPassword' && value.length > 0 && document.getElementById('repeatPassword').value != document.getElementById('signUpPassword').value){
                 setInputError(inputElement, 'Passwort stimmt nicht überein');
             }
         });
@@ -129,4 +129,52 @@ document.addEventListener('DOMContentLoaded', () => {
             clearFormMessage(signUpForm);
         });
     });
+
+    // toggle sign in password visibility
+    document.getElementById('signInPasswordContainer').querySelector('.fa-eye').addEventListener('click', () => {
+        document.getElementById('signInPasswordContainer').querySelector('.fa-eye-slash').classList.remove('visibility--hidden');
+        document.getElementById('signInPasswordContainer').querySelector('.fa-eye').classList.add('visibility--hidden');
+   
+        document.getElementById('signInPassword').type = 'text';
+    })
+   
+    document.getElementById('signInPasswordContainer').querySelector('.fa-eye-slash').addEventListener('click', () => {
+        document.getElementById('signInPasswordContainer').querySelector('.fa-eye').classList.remove('visibility--hidden');
+        document.getElementById('signInPasswordContainer').querySelector('.fa-eye-slash').classList.add('visibility--hidden');
+   
+        document.getElementById('signInPassword').type = 'password';
+    })
+
+    // toggle sign up password visibility
+    document.getElementById('signUpPasswordContainer').querySelector('.fa-eye').addEventListener('click', () => {
+        document.getElementById('signUpPasswordContainer').querySelector('.fa-eye-slash').classList.remove('visibility--hidden');
+        document.getElementById('signUpPasswordContainer').querySelector('.fa-eye').classList.add('visibility--hidden');
+   
+        document.getElementById('signUpPassword').type = 'text';
+    })
+   
+    document.getElementById('signUpPasswordContainer').querySelector('.fa-eye-slash').addEventListener('click', () => {
+        document.getElementById('signUpPasswordContainer').querySelector('.fa-eye').classList.remove('visibility--hidden');
+        document.getElementById('signUpPasswordContainer').querySelector('.fa-eye-slash').classList.add('visibility--hidden');
+   
+        document.getElementById('signUpPassword').type = 'password';
+    })
+
+    // toggle repeat password visibility
+    document.getElementById('repeatPasswordContainer').querySelector('.fa-eye').addEventListener('click', () => {
+        document.getElementById('repeatPasswordContainer').querySelector('.fa-eye-slash').classList.remove('visibility--hidden');
+        document.getElementById('repeatPasswordContainer').querySelector('.fa-eye').classList.add('visibility--hidden');
+   
+        document.getElementById('repeatPassword').type = 'text';
+    })
+   
+    document.getElementById('repeatPasswordContainer').querySelector('.fa-eye-slash').addEventListener('click', () => {
+        document.getElementById('repeatPasswordContainer').querySelector('.fa-eye').classList.remove('visibility--hidden');
+        document.getElementById('repeatPasswordContainer').querySelector('.fa-eye-slash').classList.add('visibility--hidden');
+   
+        document.getElementById('repeatPassword').type = 'password';
+    })
 });
+
+// Building a login
+// https://zellwk.com/blog/frontend-login-system/

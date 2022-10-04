@@ -135,3 +135,25 @@ body {
 .form__link:hover {
     text-decoration: underline;
 }
+
+.password-container {
+    width: 100%;
+    position: relative;
+    text-align: right;
+}
+
+.password-container i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.75rem;
+    opacity: 0.3;
+}
+
+.visibility--hidden {
+    display: none!important;
+}
+
+i {
+    cursor: pointer;
+}
