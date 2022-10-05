@@ -20,10 +20,12 @@
                 <input type="text" class="form__input" autofocus placeholder="Nutzername oder E-Mail">
                 <div class="form__input-error-message"></div>
             </div>
-            <div class="form__input-group password-container" id="signInPasswordContainer">
-                <i class="fa-solid fa-eye"></i>
-                <i class="fa-solid fa-eye-slash visibility--hidden"></i>
-                <input type="password" id="signInPassword" class="form__input password" autofocus placeholder="Passwort">
+            <div class="form__input-group" id="signInPasswordContainer">
+                <div class="password-container">
+                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-eye-slash visibility--hidden"></i>
+                    <input type="password" id="signInPassword" class="form__input password" autofocus placeholder="Passwort">
+                </div>
                 <div class="form__input-error-message"></div>
             </div>
             <button class="form__button" id="signInButton" type="submit">Einloggen</button>
@@ -46,16 +48,20 @@
                 <input type="text" id="signUpMail" class="form__input" autofocus placeholder="E-Mail">
                 <div class="form__input-error-message"></div>
             </div>
-            <div class="form__input-group password-container" id="signUpPasswordContainer">
-                <i class="fa-solid fa-eye"></i>
-                <i class="fa-solid fa-eye-slash visibility--hidden"></i>
-                <input type="password" id="signUpPassword" class="form__input password" autofocus placeholder="Passwort">
+            <div class="form__input-group" id="signUpPasswordContainer">
+                <div class="password-container">
+                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-eye-slash visibility--hidden"></i>
+                    <input type="password" id="signUpPassword" class="form__input password" autofocus placeholder="Passwort">
+                </div>
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group password-container" id="repeatPasswordContainer">
-                <i class="fa-solid fa-eye"></i>
-                <i class="fa-solid fa-eye-slash visibility--hidden"></i>
-                <input type="password" id="repeatPassword" class="form__input password" autofocus placeholder="Passwort bestätigen">
+                <div class="password-container">
+                    <i class="fa-solid fa-eye"></i>
+                    <i class="fa-solid fa-eye-slash visibility--hidden"></i>
+                    <input type="password" id="repeatPassword" class="form__input password" autofocus placeholder="Passwort bestätigen">
+                </div>
                 <div class="form__input-error-message"></div>
             </div>
             <button class="form__button" id="signUpButton" type="submit">Account erstellen</button>
@@ -65,5 +71,5 @@
         </form>
     </div>
 </body>
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </html>
